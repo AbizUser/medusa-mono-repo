@@ -1,7 +1,12 @@
+◇ローカルベースでのプロジェクト作成からデプロイまで◇
+
+
 ⦿Install to Medusa
   npx create-medusa-app@latest --with-nextjs-starter --skip-db
 
-〇RepositoryへのInitial Commit
+⦿RepositoryへのInitial Commit
+
+⦿NeonDBへの接続
 
 〇RailwayへのCooperation setting
 
@@ -16,3 +21,9 @@
     ・
 
 〇
+
+◇Railwayベースでのプロジェクト作成からリポジトリへの接続まで◇
+
+➡こちらに関しては深くは調査していないのでデプロイ時にまた調べることになる。
+  20250206の不明点としてはデプロイは成功した物のプロジェクトのソースコードをGitで管理する為の設定が不明。
+  バックエンドが動作していない。

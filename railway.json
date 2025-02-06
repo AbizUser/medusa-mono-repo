@@ -1,0 +1,11 @@
+{
+  "build": {
+    "builder": "nixpacks",
+    "buildCommand": "lerna run build --stream",
+    "installCommand": "lerna bootstrap"
+  },
+  "deploy": {
+    "startCommand": "lerna run start --parallel",
+    "healthcheckPath": "/health"
+  }
+}
