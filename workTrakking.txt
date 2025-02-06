@@ -8,6 +8,21 @@
 
 ⦿NeonDBへの接続
 
+⦿lernaのinstallとinit
+  npm install -g lerna
+  lerna init
+
+⦿Railway向け設定ファイルの作成
+  Root：railway.json）
+  StoreFront：railway.toml
+  backend:
+
+⦿GitHub Actions Workflow用ファイルの作成
+  monolithic\my-medusa-store-storefront\.github\workflows\deploy.yml
+
+⦿ルート直下.envファイル作成
+  
+
 〇RailwayへのCooperation setting
 
 〇RailwayへDeployする場合のDB設定を確認

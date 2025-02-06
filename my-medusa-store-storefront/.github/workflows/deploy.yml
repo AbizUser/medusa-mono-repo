@@ -1,0 +1,22 @@
+name: Deploy Monorepo
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        service: [backend, storefront, admin]
+    steps:
+      - uses: actions/checkout@v3
+      - uses: railwayapp/action@v2.3.0
+        with:
+          service: ${{ matrix.service }}
+          root: apps/${{ matrix.service }}
+          environment: production
+        env:
+          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          NEXT_PUBLIC_STRIPE_KEY: ${{ secrets.NEXT_PUBLIC_STRIPE_KEY }}

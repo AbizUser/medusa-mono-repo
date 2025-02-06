@@ -1,0 +1,8 @@
+[environment]
+PORT = 9000
+
+[postgresql]
+enabled = true
+
+[redis]
+enabled = true
