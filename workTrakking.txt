@@ -1,0 +1,18 @@
+⦿Install to Medusa
+  npx create-medusa-app@latest --with-nextjs-starter --skip-db
+
+〇RepositoryへのInitial Commit
+
+〇RailwayへのCooperation setting
+
+〇RailwayへDeployする場合のDB設定を確認
+
+〇SeedがIncludeか確認してnot includeの場合にはInstall
+
+〇
+
+〇必要な環境変数の調査
+  【環境変数一覧】
+    ・
+
+〇
