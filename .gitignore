@@ -17,7 +17,6 @@ coverage
 medusa-db.sql
 build
 .cache
-.txt
 
 .yarn/*
 !.yarn/patches
@@ -27,3 +26,5 @@ build
 !.yarn/versions
 
 .medusa
+
+.txt

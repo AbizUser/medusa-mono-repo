@@ -21,17 +21,45 @@
   monolithic\my-medusa-store-storefront\.github\workflows\deploy.yml
 
 ⦿ルート直下.envファイル作成
-  
 
+⦿Railwayでのinital Deployとドメインの設定
+　モノレポだからかデプロイプロセスに5分以上時間がかかっている。
+
+⦿Railwayへ連携したプロジェクトで使用する環境変数の設定場所確認と設定
+  ➡デプロイして結果待ち　
+    ⦿デプロイ時にNetworkエラーが発生している。
+  
+◆Railway上のプロジェクトを出力してローカルで修正する方法に関して。
+  プロジェクト管理画面において左下のSet up yourt project locallyというボタンを押下すると
+  選択肢が出現するのでその内容確認と実際にCLIを使用してセットアップしてみてもいいかも。
+  　➡以下のコマンドでセットアップ可能みたい。ただ、個別の機能ごとに選択してローカルで動作させるようなものらしくて
+      モノリシックでローカルに落とすことはできないかも？
+      　➡モノリシックで落とすことはESCで可能みたい。
+      　  問題はローカルのVSと連携した後にローカルに落とすコマンドが不明な事。
+
+〇Deployment failed during the network processで発生したエラーを解消
+  Deployタブを確認してみたところ以下のLogが確認できたので、内容に関して確認中
+   ----------------------------------------------------------------------
+    Starting Container
+    lerna notice cli v8.1.9
+    lerna info ci enabled
+    lerna success run No packages found with the lifecycle script 'start'
+   ----------------------------------------------------------------------
+  〇Lerna用のJsonとルートに配置するPackage.jsonを用意してから再実行する。
+    ※この時証跡として何を追加したのか見返せるようにしたい。
+    ・ルートのpackage.jsonを作成追加
+　　・lerna.jsonの追加
+　　・
 〇RailwayへのCooperation setting
 
 〇RailwayへDeployする場合のDB設定を確認
 
 〇SeedがIncludeか確認してnot includeの場合にはInstall
 
-〇
+〇Redisサービスにログインしてシークレットを取得など基本的な設定を行う。
 
 〇必要な環境変数の調査
+　管理ダッシュボードのSettingsタブにあるShared Variablesへ環境変数を設定する。
   【環境変数一覧】
     ・
 
@@ -42,3 +70,5 @@
 ➡こちらに関しては深くは調査していないのでデプロイ時にまた調べることになる。
   20250206の不明点としてはデプロイは成功した物のプロジェクトのソースコードをGitで管理する為の設定が不明。
   バックエンドが動作していない。
+
+  〇DBのURLなど更新可能な箇所の更新または設定
